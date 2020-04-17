@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.Socialmedia-div {
+  padding: 1vh;
+}
+.Socialmedia-icon {
+  padding-right: 10px;
+}
