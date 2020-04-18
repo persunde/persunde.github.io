@@ -1,10 +1,8 @@
-import React from 'react';
-import './App.css';
-import AnnonPerson from './img/annonperson.png';
+import Link from 'next/link'
+import SomedIcons from "../src/components/somed/SomedIcons"
+import AnnonPerson from "../src/img/annonperson.png"
 
-import SomedIcons from "./components/somed/SomedIcons"
-
-function App() {
+export default function Index() {
   return (
     <div className="App">
       <header className="App-header">
@@ -14,11 +12,15 @@ function App() {
         </figure>
         </div>
         <SomedIcons
-          color="white"
+          color="black"
         />
         <div style={{display: 'inline-block'}} className="buttons subtitle">
-          <a href="https://www.sunde.dev/about" className="button is-rounded is-success">About</a>
-          <a className="button is-rounded is-primary" target="_blank" rel="noopener noreferrer" href="https://www.sunde.dev/resume">Resume</a>
+          <Link href="/about">
+            <a className="button is-rounded is-success">About</a>
+          </Link>
+          <Link href="/resume">
+            <a className="button is-rounded is-primary" target="_blank" rel="noopener noreferrer" >Resume</a>
+          </Link>
         </div>
         <p>
           Per Sunde fullstack developer
@@ -27,5 +29,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
