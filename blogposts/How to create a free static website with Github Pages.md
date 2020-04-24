@@ -62,15 +62,17 @@ Here we will use Create-React-App, you can use any other tool you want, you just
 Now you can edit and work on your website as you see fit.
 
 ## 5 Install gh-pages package
-gh-pages is a package that helps you to automate the deploying process, and make your project compatible with Github Pages.
+**gh-pages** is a package that helps you to automate the deploying process, and make your project compatible with Github Pages.
 Inside your project folder run this command to install gh.pages package:
     
     npm install gh-pages --save-dev
 
-## Fix shit
-  Open the file "package.json" at the highest level, add this to the file:
+## Setup deployment config
+Open the file "package.json" at the highest level, add this to the file:
+    
     "homepage": "https://myusername.github.io/"
-  At the bottom of "scripts" in the same file add:
+
+At the bottom of **"scripts"** in the same file add:
     "predeploy": "npm run build && echo \"mydomain.com\" > build/CNAME",
     "deploy": "gh-pages -b master -d build"
 
@@ -231,6 +233,6 @@ C --> D
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODE2MTIxNDEsNzUyNjUwOTI1LDYxMz
-c1NTUwNiwtMjA2NTA2NDA1NSwtOTE5NTQ4OTEzXX0=
+eyJoaXN0b3J5IjpbLTQ3NTEyNTM3Miw3NTI2NTA5MjUsNjEzNz
+U1NTA2LC0yMDY1MDY0MDU1LC05MTk1NDg5MTNdfQ==
 -->
