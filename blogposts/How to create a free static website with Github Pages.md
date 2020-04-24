@@ -1,15 +1,15 @@
 # How to create a free static website with Github Pages
 
 You can get your own personal website at no cost. And if you want to have your own personal domain, all you need to do is buy is your own domain and you are covered!
-There is one caveat, your website has to be made up of only static  files with no server side logic. This works well, for blogs, Single Page Applications, o
+There is one caveat, your website has to be made up of only static  files with no server side logic. This works well, for things like blogs, Single Page Applications or simple webpages for small companies and restaurants.
 
 You can do this through Github Pages, or the equivalent Gitlab Pages.
-In this guide we will use Gihub Pages.
+In this guide we will use Gihub Pages and this page is hosted on Github Pages using this method.
 
-Steps:
+## Steps
 1. Create a Gihub account if you dont already have one
-2. Create a new branch:
-  your-username.github.io
+2. Create a new branch called myusername.github.io
+	3. M
 3. Download NPM
 4. Innitialize your site
 5. Download gh-pages tools
@@ -219,5 +219,5 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MDk3NDUyMiwtOTE5NTQ4OTEzXX0=
+eyJoaXN0b3J5IjpbMTU5NTcwODE3LC05MTk1NDg5MTNdfQ==
 -->
