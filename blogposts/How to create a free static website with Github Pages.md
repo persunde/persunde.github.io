@@ -17,10 +17,10 @@ In this guide we will use Gihub Pages and this page is hosted on Github Pages us
 7. Buy a domain and link it to your personal Github Pages website
 
 
-## Step 1 - Create an Github account
+## 1 - Create an Github account
 Go to https://github.com/ and sign up. 
 
-## Step 2 - Create a new repository
+## 2 Create a new repository
 Go to: https://github.com/new
 
 Create a new repository, and name it: 
@@ -33,7 +33,7 @@ In my case, my username is **persunde**, so my branch was named:
 
 Create a file called README.md file in your repository.
 
-## 3 - Download NPM
+## 3 Download NPM
 If you dont have it already you need to download NPM. To avoid future conflicts avoid downloading NPM via package managers and while using sudo. It may cause unnecessary problems and headaches.
 Instead download NPM as described here:
 https://github.com/nvm-sh/nvm#installing-and-updating
@@ -53,20 +53,15 @@ Here we will use Create-React-App, you can use any other tool you want, you just
   
 
  1. First clone your repository myusername.github.io and cd into your project
- 3. Create your React App, execute these commands in the root folder of your project
+ 2. Create your React App, execute these commands in the root folder of your project
 
-		    npx create-react-app my-app
-		    cd my-app
-		    npm start
+	    npx create-react-app my-app
+	    cd my-app
+	    npm start
 
-First clone your repository, then cd into your repository folder, next run these commands to create your React app:
-    npx create-react-app my-app
-    cd my-app
-    npm start
+Now you can edit and work on your website as you see fit.
 
-  Edit and work on your page as you see fit
-
-5. Install gh-pages package
+## 5 Install gh-pages package
 gh-pages is a tool that helps you to automate the process, and make your project compatiable with Github Pages.
   Inside your project folder run this command to install gh.pages package:
     npm install gh-pages --save-dev
@@ -235,6 +230,6 @@ C --> D
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzA0NTQ2MjAsNzUyNjUwOTI1LDYxMz
-c1NTUwNiwtMjA2NTA2NDA1NSwtOTE5NTQ4OTEzXX0=
+eyJoaXN0b3J5IjpbLTIxMDU2MzA2Niw3NTI2NTA5MjUsNjEzNz
+U1NTA2LC0yMDY1MDY0MDU1LC05MTk1NDg5MTNdfQ==
 -->
