@@ -57,7 +57,6 @@ Here we will use Create-React-App, you can use any other tool you want, you just
 
 	    npx create-react-app my-app
 	    cd my-app
-	    npm start
 
 Now you can edit and work on your website as you see fit.
 
@@ -92,6 +91,7 @@ At the bottom of **"scripts"** in the same file add:
 > your project:  
 > https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
 
+At the end your file s
 
 ## Publish a File
 
@@ -100,6 +100,7 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MDM4MzE4OSw3NTI2NTA5MjUsNjEzNz
-U1NTA2LC0yMDY1MDY0MDU1LC05MTk1NDg5MTNdfQ==
+eyJoaXN0b3J5IjpbLTIwODYxNzQ2MzcsLTY5MDM4MzE4OSw3NT
+I2NTA5MjUsNjEzNzU1NTA2LC0yMDY1MDY0MDU1LC05MTk1NDg5
+MTNdfQ==
 -->
