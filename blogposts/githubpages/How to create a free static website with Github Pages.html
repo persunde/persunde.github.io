@@ -1,0 +1,168 @@
+---
+
+
+---
+
+<h1 id="how-to-create-a-free-static-website-with-github-pages">How to create a free static website with Github Pages</h1>
+<p>You can get your own personal website at no cost. And if you want to have your own personal domain, all you need to do is buy is your own domain and you are covered!<br>
+There is one caveat, your website has to be made up of only static  files with no server side logic. This works well, for things like blogs, Single Page Applications or simple webpages for small companies and restaurants.</p>
+<p>You can do this through Github Pages, or the equivalent Gitlab Pages.<br>
+In this guide we will use Gihub Pages and this page is hosted on Github Pages using this method.</p>
+<h2 id="steps">Steps</h2>
+<ol>
+<li>Create a Gihub account if you dont already have one</li>
+<li>Create a new branch called <a href="http://myusername.github.io">myusername.github.io</a>
+<ul>
+<li>Make sure you change “myusername” with your Github username</li>
+</ul>
+</li>
+<li>Download NPM</li>
+<li>Initialize your site</li>
+<li>Download gh-pages tools</li>
+<li>Deploy your site</li>
+<li>Buy a domain and link it to your personal Github Pages website</li>
+</ol>
+<h2 id="create-an-github-account">1 Create an Github account</h2>
+<p>Go to <a href="https://github.com/">https://github.com/</a> and sign up.</p>
+<h2 id="create-a-new-repository">2 Create a new repository</h2>
+<p>Go to: <a href="https://github.com/new">https://github.com/new</a></p>
+<p>Create a new repository, and name it:</p>
+<pre><code>myusername.github.io
+</code></pre>
+<p>In my case, my username is <strong>persunde</strong>, so my branch was named:</p>
+<pre><code>persunde.github.io
+</code></pre>
+<p>Create a file called <a href="http://README.md">README.md</a> file in your repository.</p>
+<h2 id="download-npm">3 Download NPM</h2>
+<p>If you dont have it already you need to download NPM. To avoid future conflicts avoid downloading NPM via package managers and while using sudo. It may cause unnecessary problems and headaches.<br>
+Instead download NPM as described here:<br>
+<a href="https://github.com/nvm-sh/nvm#installing-and-updating">https://github.com/nvm-sh/nvm#installing-and-updating</a></p>
+<p>Basically you need to do execute these three commands:</p>
+<pre><code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] &amp;&amp; printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; \. "$NVM_DIR/nvm.sh" # This loads nvm
+</code></pre>
+<blockquote>
+<p>Other installation methods: <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm">https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm</a></p>
+</blockquote>
+<h2 id="create-your-react-app">4 Create your React App</h2>
+<p>Here we will use Create-React-App, you can use any other tool you want, you just need a static webpage template up and running. Use create-react-app to create your react application.</p>
+<ol>
+<li>
+<p>First clone your repository <a href="http://myusername.github.io">myusername.github.io</a> and cd into your project</p>
+</li>
+<li>
+<p>Create your React App, execute these commands in the root folder of your project</p>
+<pre><code>npx create-react-app my-app
+cd my-app
+</code></pre>
+</li>
+</ol>
+<p>Now you can edit and work on your website as you see fit.</p>
+<h2 id="install-gh-pages-package">5 Install gh-pages package</h2>
+<p><strong>gh-pages</strong> is a package that helps you to automate the deploying process, and make your project compatible with Github Pages.<br>
+Inside your project folder run this command to install gh.pages package:</p>
+<pre><code>npm install gh-pages --save-dev
+</code></pre>
+<h2 id="setup-deployment-config">6 Setup deployment config</h2>
+<p>Open the file “<strong>package.json</strong>” at the highest level, add this to the file:</p>
+<pre><code>"homepage": "https://myusername.github.io/"
+</code></pre>
+<p>Or</p>
+<pre><code>"homepage": "https://mydomain.com/"
+</code></pre>
+<p>At the bottom of <strong>“scripts”</strong> in the same file add:<br>
+If you <strong>have your own domain:</strong></p>
+<pre><code>"predeploy": "npm run build",
+"deploy": "gh-pages -b master -d build"
+</code></pre>
+<p>If you <strong>do NOT have your own domain</strong> you need to add a <strong>CNAME</strong> file with your domain to the root of your deployment folder:</p>
+<pre><code>"predeploy": "npm run build &amp;&amp; echo \"mydomain.com\" &gt; build/CNAME",
+"deploy": "gh-pages -b master -d build"
+</code></pre>
+<blockquote>
+<p><strong>NOTE:</strong> If you are using <strong>NEXT.JS</strong>  do this instead:</p>
+<pre><code>"predeploy": "next build &amp;&amp; next export -o build/ &amp;&amp; echo \"mydomain.com\" &gt; build/CNAME &amp;&amp; touch build/.nojekyll",
+"deploy": "gh-pages -b master -d build --dotfiles true"
+</code></pre>
+<p>Github uses Jekyll to build your site, and it removes all files and<br>
+folders starting with “_”, and NEXT.JS publishes your files under<br>
+folder “_next/”.   So to avoid jekyll ignoring your build folder,<br>
+github requires that you adds a file called “.nojekyll” to the root of<br>
+your project:<br>
+<a href="https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/">https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/</a></p>
+</blockquote>
+<p>At the end your file should look similar to this:</p>
+<pre><code>{
+    "name": "my-app",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "https://mydomain.com/"
+    "dependencies": {
+	    "@testing-library/jest-dom": "^4.2.4",
+	    "@testing-library/react": "^9.3.2",
+	    "@testing-library/user-event": "^7.1.2",
+	    "react": "^16.13.1",
+	    "react-dom": "^16.13.1",
+	    "react-scripts": "3.4.1"
+    },
+    "scripts": {
+	    "start": "react-scripts start",
+	    "build": "react-scripts build",
+	    "test": "react-scripts test",
+	    "eject": "react-scripts eject"
+	    "predeploy": "npm run build &amp;&amp; echo \"mydomain.com\" &gt; build/CNAME", 
+	    "deploy": "gh-pages -b master -d build"
+    },
+    "eslintConfig": {
+	    "extends": "react-app"
+    },
+    "browserslist": {
+	    "production": [
+		"&gt;0.2%",
+		"not dead",
+		"not op_mini all"
+	    ],
+	     "development": [
+		"last 1 chrome version",
+		"last 1 firefox version",
+		"last 1 safari version"
+	   ]
+    }
+}
+</code></pre>
+<h2 id="create-a-dev-branch">Create a dev branch</h2>
+<p>You are required to publish your site through the master branch, and when you deploy the master branch will be overwritten. Therefore you should create a new dev branch first.</p>
+<p>Run these commands in your project folder</p>
+<pre><code>git add .
+git commit -m 'create a seperate dev branch'
+git co -b dev
+git push
+</code></pre>
+<p>Now make your new <strong>dev</strong> branch the default branch for your repository.<br>
+Go to your repos</p>
+<ol>
+<li>Open your Github repository in your browser
+<ul>
+<li><a href="https://github.com/myusername/myusername.github.io">https://github.com/myusername/myusername.github.io</a></li>
+</ul>
+</li>
+<li>Click settings</li>
+<li>Under <strong>Branches</strong> on the left menu</li>
+<li>Change default branch <strong>from master to dev</strong></li>
+</ol>
+<p><img src="https://i.imgur.com/fJwFIck.png" alt="Change default branch"></p>
+<h2 id="deploy-your-site">Deploy your site</h2>
+<p>To deploy your site and new changes you make to your site, execute this command in the root of your project folder:</p>
+<pre><code>npm run deploy
+</code></pre>
+<p>NOTE: <strong>DO NOT PULL ON THE GITHUB MASTER BRANCH</strong>, THIS IS ONLY USED FOR DEPLOYING THE SITE</p>
+<h2 id="publish-a-file">Publish a File</h2>
+<p>You can publish your file by opening the <strong>Publish</strong> sub-menu and by clicking <strong>Publish to</strong>. For some locations, you can choose between the following formats:</p>
+<ul>
+<li>Markdown: publish the Markdown text on a website that can interpret it (<strong>GitHub</strong> for instance),</li>
+<li>HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).</li>
+</ul>
+
