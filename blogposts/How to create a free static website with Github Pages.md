@@ -152,8 +152,10 @@ Go to your repos
  1. Open your Github repository in your browser
 	 * https://github.com/myusername/myusername.github.io
  2. Click settings
- 3. Under **Options**
- 4. 
+ 3. Under **Branches** on the left menu
+ 4. Change default branch **from master to dev**
+ 5
+![change default branche](https://imgur.com/fJwFIck)
 
 ## Deploy your site
 Run
@@ -168,7 +170,7 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNjE3NjkzNCwtNTEwNzYwNjQyLC02OT
-AzODMxODksNzUyNjUwOTI1LDYxMzc1NTUwNiwtMjA2NTA2NDA1
-NSwtOTE5NTQ4OTEzXX0=
+eyJoaXN0b3J5IjpbLTEyMTc5MjE2OTksMTEyNjE3NjkzNCwtNT
+EwNzYwNjQyLC02OTAzODMxODksNzUyNjUwOTI1LDYxMzc1NTUw
+NiwtMjA2NTA2NDA1NSwtOTE5NTQ4OTEzXX0=
 -->
