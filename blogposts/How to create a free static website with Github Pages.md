@@ -93,67 +93,40 @@ At the bottom of **"scripts"** in the same file add:
 
 At the end your file should look something like this:
 
-{
-
-"name": "my-app",
-
-"version": "0.1.0",
-
-"private": true,
-
-"dependencies": {
-
-"@testing-library/jest-dom": "^4.2.4",
-
-"@testing-library/react": "^9.3.2",
-
-"@testing-library/user-event": "^7.1.2",
-
-"react": "^16.13.1",
-
-"react-dom": "^16.13.1",
-
-"react-scripts": "3.4.1"
-
-},
-
-"scripts": {
-
-"start": "react-scripts start",
-
-"build": "react-scripts build",
-
-"test": "react-scripts test",
-
-"eject": "react-scripts eject"
-
-},
-
-"eslintConfig": {
-
-"extends": "react-app"
-
-},
-
-"browserslist": {
-
-"production": [
-
-">0.2%",
-
-"not dead",
-
-"not op_mini all"
-
-],
-
-"development": [
-"last 1 chrome version",
-"last 1 firefox version",
-"last 1 safari version"
-]
-}
-}
+    {
+	    "name": "my-app",
+	    "version": "0.1.0",
+	    "private": true,
+	    "dependencies": {
+		    "@testing-library/jest-dom": "^4.2.4",
+		    "@testing-library/react": "^9.3.2",
+		    "@testing-library/user-event": "^7.1.2",
+		    "react": "^16.13.1",
+		    "react-dom": "^16.13.1",
+		    "react-scripts": "3.4.1"
+	    },
+	    "scripts": {
+		    "start": "react-scripts start",
+		    "build": "react-scripts build",
+		    "test": "react-scripts test",
+		    "eject": "react-scripts eject"
+	    },
+	    "eslintConfig": {
+		    "extends": "react-app"
+	    },
+	    "browserslist": {
+		    "production": [
+			">0.2%",
+		        "not dead",
+			"not op_mini all"
+		    ],
+		     "development": [
+	    "last 1 chrome version",
+	    "last 1 firefox version",
+	    "last 1 safari version"
+	    ]
+	    }
+    }
 
 ## Publish a File
 
@@ -161,8 +134,9 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 
 - Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzYzMjI5NjEyLC02OTAzODMxODksNzUyNj
+eyJoaXN0b3J5IjpbNDI2NjQ5NzI2LC02OTAzODMxODksNzUyNj
 UwOTI1LDYxMzc1NTUwNiwtMjA2NTA2NDA1NSwtOTE5NTQ4OTEz
 XX0=
 -->
