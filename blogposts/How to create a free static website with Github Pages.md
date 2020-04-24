@@ -9,7 +9,7 @@ In this guide we will use Gihub Pages and this page is hosted on Github Pages us
 ## Steps
 1. Create a Gihub account if you dont already have one
 2. Create a new branch called myusername.github.io
-	3. M
+	* Make sure you change "myusername" with your Github username  
 3. Download NPM
 4. Innitialize your site
 5. Download gh-pages tools
@@ -219,5 +219,5 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NTcwODE3LC05MTk1NDg5MTNdfQ==
+eyJoaXN0b3J5IjpbLTIwNjUwNjQwNTUsLTkxOTU0ODkxM119
 -->
