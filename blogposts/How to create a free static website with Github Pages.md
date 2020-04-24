@@ -17,7 +17,7 @@ In this guide we will use Gihub Pages and this page is hosted on Github Pages us
 7. Buy a domain and link it to your personal Github Pages website
 
 
-## 1 - Create an Github account
+## 1 Create an Github account
 Go to https://github.com/ and sign up. 
 
 ## 2 Create a new repository
@@ -62,11 +62,12 @@ Here we will use Create-React-App, you can use any other tool you want, you just
 Now you can edit and work on your website as you see fit.
 
 ## 5 Install gh-pages package
-gh-pages is a tool that helps you to automate the process, and make your project compatiable with Github Pages.
-  Inside your project folder run this command to install gh.pages package:
+gh-pages is a package that helps you to automate the deploying process, and make your project compatible with Github Pages.
+Inside your project folder run this command to install gh.pages package:
+    
     npm install gh-pages --save-dev
 
-6. Fix shit
+## Fix shit
   Open the file "package.json" at the highest level, add this to the file:
     "homepage": "https://myusername.github.io/"
   At the bottom of "scripts" in the same file add:
@@ -230,6 +231,6 @@ C --> D
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDU2MzA2Niw3NTI2NTA5MjUsNjEzNz
-U1NTA2LC0yMDY1MDY0MDU1LC05MTk1NDg5MTNdfQ==
+eyJoaXN0b3J5IjpbLTE1ODE2MTIxNDEsNzUyNjUwOTI1LDYxMz
+c1NTUwNiwtMjA2NTA2NDA1NSwtOTE5NTQ4OTEzXX0=
 -->
