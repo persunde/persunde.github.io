@@ -147,6 +147,14 @@ Run these commands in your project folder
     git push
 
 Now make your new **dev** branch the default branch for your repository.
+Go to your repos
+
+ 1. Open your Github repository in your browser
+	 * https://github.com/myusername/myusername.github.io
+ 2. Click settings
+ 3. Under **Options**
+ 4. 
+
 ## Deploy your site
 Run
 
@@ -160,7 +168,7 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1OTc4ODI0LC01MTA3NjA2NDIsLTY5MD
-M4MzE4OSw3NTI2NTA5MjUsNjEzNzU1NTA2LC0yMDY1MDY0MDU1
-LC05MTk1NDg5MTNdfQ==
+eyJoaXN0b3J5IjpbMTEyNjE3NjkzNCwtNTEwNzYwNjQyLC02OT
+AzODMxODksNzUyNjUwOTI1LDYxMzc1NTUwNiwtMjA2NTA2NDA1
+NSwtOTE5NTQ4OTEzXX0=
 -->
