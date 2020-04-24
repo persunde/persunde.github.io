@@ -52,14 +52,12 @@ Basically you need to do execute these three commands:
 Here we will use Create-React-App, you can use any other tool you want, you just need a static webpage template up and running. Use create-react-app to create your react application.
   
 
- 1. First clone your repository myusername.github.io
- 2. Create your React App
-Execute these commands:
+ 1. First clone your repository myusername.github.io and cd into your project
+ 3. Create your React App, execute these commands in the root folder of your project
 
-    enter code here
-
-cd my-app
-npm start
+		    npx create-react-app my-app
+		    cd my-app
+		    npm start
 
 First clone your repository, then cd into your repository folder, next run these commands to create your React app:
     npx create-react-app my-app
@@ -237,6 +235,6 @@ C --> D
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk3OTAyNjU3LDc1MjY1MDkyNSw2MTM3NT
-U1MDYsLTIwNjUwNjQwNTUsLTkxOTU0ODkxM119
+eyJoaXN0b3J5IjpbLTE0NzA0NTQ2MjAsNzUyNjUwOTI1LDYxMz
+c1NTUwNiwtMjA2NTA2NDA1NSwtOTE5NTQ4OTEzXX0=
 -->
