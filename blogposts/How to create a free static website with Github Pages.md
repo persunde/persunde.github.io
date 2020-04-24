@@ -49,9 +49,19 @@ Basically you need to do execute these three commands:
 > Other installation methods: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm
 
 ## 4 Create your React App
-Here we will use Create-React-App, you can use any other tool you want, you just need a static webpage template up and running.
-  Use create-react-app to create your react application.
-  First clone your repository, then cd into your repository folder, next run these commands to create your React app:
+Here we will use Create-React-App, you can use any other tool you want, you just need a static webpage template up and running. Use create-react-app to create your react application.
+  
+
+ 1. First clone your repository myusername.github.io
+ 2. Create your React App
+
+npx create-react-app my-app
+cd my-app
+npm start
+
+ 3. 
+
+First clone your repository, then cd into your repository folder, next run these commands to create your React app:
     npx create-react-app my-app
     cd my-app
     npm start
@@ -224,6 +234,6 @@ C --> D
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUyNjUwOTI1LDYxMzc1NTUwNiwtMjA2NT
-A2NDA1NSwtOTE5NTQ4OTEzXX0=
+eyJoaXN0b3J5IjpbLTE3ODYxOTY2NzksNzUyNjUwOTI1LDYxMz
+c1NTUwNiwtMjA2NTA2NDA1NSwtOTE5NTQ4OTEzXX0=
 -->
