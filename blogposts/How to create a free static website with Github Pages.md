@@ -24,9 +24,12 @@ Go to https://github.com/ and sign up.
 Go to: https://github.com/new
 
 Create a new repository, and name it: 
-* your-username.github.io
+
+    myusername.github.io
+
 In my case, my username is persunde, so my branch was named:
-  persunde.github.io
+
+    **persunde**.github.io
 
 Create a README.md file in your branch.
 
@@ -216,6 +219,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ1NDM5NzMyLC0yMDY1MDY0MDU1LC05MT
+eyJoaXN0b3J5IjpbMzUwMzgxMTcwLC0yMDY1MDY0MDU1LC05MT
 k1NDg5MTNdfQ==
 -->
