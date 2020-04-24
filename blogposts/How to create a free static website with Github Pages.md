@@ -154,9 +154,8 @@ Go to your repos
  2. Click settings
  3. Under **Branches** on the left menu
  4. Change default branch **from master to dev**
- 5
-![change default branche](https://imgur.com/fJwFIck)
 
+![Change default branch](https://i.imgur.com/fJwFIck.png)
 ## Deploy your site
 Run
 
@@ -170,7 +169,7 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTc5MjE2OTksMTEyNjE3NjkzNCwtNT
-EwNzYwNjQyLC02OTAzODMxODksNzUyNjUwOTI1LDYxMzc1NTUw
-NiwtMjA2NTA2NDA1NSwtOTE5NTQ4OTEzXX0=
+eyJoaXN0b3J5IjpbNDg2MTM2MjMzLDExMjYxNzY5MzQsLTUxMD
+c2MDY0MiwtNjkwMzgzMTg5LDc1MjY1MDkyNSw2MTM3NTU1MDYs
+LTIwNjUwNjQwNTUsLTkxOTU0ODkxM119
 -->
