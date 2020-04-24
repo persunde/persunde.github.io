@@ -1,3 +1,80 @@
+# How to create a free static website with Github Pages
+
+You can get your own personal website at  no cost. All you need to buy is your own domain and you are covered.
+The only issue is that the website has to be static, with no server side logic, except to serve the static files.
+
+You can do this through Github Pages, or the equivalent Gitlab Pages.
+In this guide we will use Gihub Pages.
+
+Steps:
+1. Create a Gihub account if you dont already have one
+2. Create a new branch:
+  your-username.github.io
+3. Download NPM
+4. Innitialize your site
+5. Download gh-pages tools
+  gh-pages
+6. Deply your site
+7. Buy a domain and link it to your Github Pages site
+
+
+Step 1:
+Create an Github account here:
+  https://github.com/
+
+
+Step 2 - Create a new branch
+Go to: https://github.com/new
+
+Call your branch:
+  your-username.github.io
+In my case, my username is persunde, so my branch was named:
+  persunde.github.io
+
+Create a README.md file in your branch.
+
+3 - Download NPM
+  Download NPM:
+  To avoid conflictis avoid downloading NPM via package managers and using sudo. It may cause uneccesary problems and headaces.
+  https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm
+  https://github.com/nvm-sh/nvm#installing-and-updating
+
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+4 Create your React App
+  Here we will use Create-React-App, you can use any other tool you want, you just need a static webpage template up and running.
+  Use create-react-app to create your react application.
+  First clone your repository, then cd into your repository folder, next run these commands to create your React app:
+    npx create-react-app my-app
+    cd my-app
+    npm start
+
+  Edit and work on your page as you see fit
+
+5. Install gh-pages package
+gh-pages is a tool that helps you to automate the process, and make your project compatiable with Github Pages.
+  Inside your project folder run this command to install gh.pages package:
+    npm install gh-pages --save-dev
+
+6. Fix shit
+  Open the file "package.json" at the highest level, add this to the file:
+    "homepage": "https://myusername.github.io/"
+  At the bottom of "scripts" in the same file add:
+    "predeploy": "npm run build && echo \"mydomain.com\" > build/CNAME",
+    "deploy": "gh-pages -b master -d build"
+
+  NOTE: If you are using NEXT.JS do this:
+    "predeploy": "next build && next export -o build/ && echo \"mydomain.com\" > build/CNAME && touch build/.nojekyll",
+    "deploy": "gh-pages -b master -d build --dotfiles true"
+  Github uses jekyll to build your site, and it removes all files and folders starting with "_", and NEXT.JS publishes your files under folder "_next/".
+  So to avoid jekyll ignoring your build folder, github requires that you adds a file called ".nojekyll" to the root of your project:
+  https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
+
+
+
 # Welcome to StackEdit!
 
 Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar. asdasdasd
@@ -142,5 +219,5 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxOTU0ODkxM119
+eyJoaXN0b3J5IjpbMTEyMDY4MDE2NiwtOTE5NTQ4OTEzXX0=
 -->
