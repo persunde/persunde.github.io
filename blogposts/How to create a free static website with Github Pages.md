@@ -34,14 +34,20 @@ In my case, my username is **persunde**, so my branch was named:
 Create a file called README.md file in your repository.
 
 ## 3 - Download NPM
-If you dont have it already you need to download NPM. To avoid future conflicts you should download the NPM via a package managers and using sudo. It may cause uneccesary problems and headaces.
-  https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm
-  https://github.com/nvm-sh/nvm#installing-and-updating
+If you dont have it already you need to download NPM. To avoid future conflicts avoid downloading NPM via package managers and while using sudo. It may cause unnecessary problems and headaches.
+Instead download NPM as described here:
 
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+> https://github.com/nvm-sh/nvm#installing-and-updating
+> You canhttps://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm
 
-  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+Basically you need to do this:
+
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+    
+    wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+    
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 4 Create your React App
   Here we will use Create-React-App, you can use any other tool you want, you just need a static webpage template up and running.
@@ -217,7 +223,8 @@ A --> C(Round Rect)
 B --> D{Rhombus}
 C --> D
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY3NTYwMjU0LDYxMzc1NTUwNiwtMjA2NT
-A2NDA1NSwtOTE5NTQ4OTEzXX0=
+eyJoaXN0b3J5IjpbLTI1NTA3MDI4Niw2MTM3NTU1MDYsLTIwNj
+UwNjQwNTUsLTkxOTU0ODkxM119
 -->
