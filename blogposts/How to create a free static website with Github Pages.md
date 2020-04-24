@@ -110,12 +110,14 @@ At the end your file should look something like this:
 		    "build": "react-scripts build",
 		    "test": "react-scripts test",
 		    "eject": "react-scripts eject"
+		    "predeploy": "npm run build && echo \"mydomain.com\" > build/CNAME",
+		    "deploy": "gh-pages -b master -d build"
 	    },
 	    "eslintConfig": {
 		    "extends": "react-app"
 	    },
 	    "browserslist": {
-"production": [
+		    "production": [
 			">0.2%",
 			"not dead",
 			"not op_mini all"
@@ -124,7 +126,7 @@ At the end your file should look something like this:
 			"last 1 chrome version",
 			"last 1 firefox version",
 			"last 1 safari version"
-		    ]
+		   ]
 	    }
     }
 
@@ -136,7 +138,7 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2ODkzNTc0MiwtNjkwMzgzMTg5LDc1Mj
-Y1MDkyNSw2MTM3NTU1MDYsLTIwNjUwNjQwNTUsLTkxOTU0ODkx
-M119
+eyJoaXN0b3J5IjpbMjE5NjAxMDYyLC02OTAzODMxODksNzUyNj
+UwOTI1LDYxMzc1NTUwNiwtMjA2NTA2NDA1NSwtOTE5NTQ4OTEz
+XX0=
 -->
