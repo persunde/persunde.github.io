@@ -77,14 +77,17 @@ At the bottom of **"scripts"** in the same file add:
     "predeploy": "npm run build && echo \"mydomain.com\" > build/CNAME",
     "deploy": "gh-pages -b master -d build"
 
-**NOTE:** If you are using **NEXT.JS**  do this instead:
-
-    "predeploy": "next build && next export -o build/ && echo \"mydomain.com\" > build/CNAME && touch build/.nojekyll",
-    "deploy": "gh-pages -b master -d build --dotfiles true"
-
-Github uses Jekyll to build your site, and it removes all files and folders starting with "_", and NEXT.JS publishes your files under folder "_next/".
-  So to avoid jekyll ignoring your build folder, github requires that you adds a file called ".nojekyll" to the root of your project:
-  https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
+> **NOTE:** If you are using **NEXT.JS**  do this instead:
+> 
+>     "predeploy": "next build && next export -o build/ && echo \"mydomain.com\" > build/CNAME && touch build/.nojekyll",
+>     "deploy": "gh-pages -b master -d build --dotfiles true"
+> 
+> Github uses Jekyll to build your site, and it removes all files and
+> folders starting with "_", and NEXT.JS publishes your files under
+> folder "_next/".   So to avoid jekyll ignoring your build folder,
+> github requires that you adds a file called ".nojekyll" to the root of
+> your project:  
+> https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
 
 
 
@@ -236,6 +239,6 @@ C --> D
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTY4MTk3ODIsNzUyNjUwOTI1LDYxMz
+eyJoaXN0b3J5IjpbLTEzMDgxNjgwMTYsNzUyNjUwOTI1LDYxMz
 c1NTUwNiwtMjA2NTA2NDA1NSwtOTE5NTQ4OTEzXX0=
 -->
