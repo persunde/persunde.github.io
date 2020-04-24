@@ -17,16 +17,14 @@ In this guide we will use Gihub Pages and this page is hosted on Github Pages us
 7. Buy a domain and link it to your personal Github Pages website
 
 
-Step 1:
-Create an Github account here:
-  https://github.com/
+## Step 1 - Create an Github account
+Go to https://github.com/ and sign up. 
 
-
-Step 2 - Create a new branch
+## Step 2 - Create a new repository
 Go to: https://github.com/new
 
-Call your branch:
-  your-username.github.io
+Create a new repository, and name it: 
+* your-username.github.io
 In my case, my username is persunde, so my branch was named:
   persunde.github.io
 
@@ -218,6 +216,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODQ0NTExNTQsLTIwNjUwNjQwNTUsLT
-kxOTU0ODkxM119
+eyJoaXN0b3J5IjpbNTQ1NDM5NzMyLC0yMDY1MDY0MDU1LC05MT
+k1NDg5MTNdfQ==
 -->
