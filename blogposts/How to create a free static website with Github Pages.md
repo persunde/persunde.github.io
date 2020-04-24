@@ -68,11 +68,12 @@ Inside your project folder run this command to install gh.pages package:
     npm install gh-pages --save-dev
 
 ## 6 Setup deployment config
-Open the file "package.json" at the highest level, add this to the file:
+Open the file "**package.json**" at the highest level, add this to the file:
     
     "homepage": "https://myusername.github.io/"
+Or
 
-	
+	"homepage": "https://mydomain.com/"
 
 At the bottom of **"scripts"** in the same file add:
 
@@ -99,6 +100,6 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjA0NTM2MTMsNzUyNjUwOTI1LDYxMz
-c1NTUwNiwtMjA2NTA2NDA1NSwtOTE5NTQ4OTEzXX0=
+eyJoaXN0b3J5IjpbLTY5MDM4MzE4OSw3NTI2NTA5MjUsNjEzNz
+U1NTA2LC0yMDY1MDY0MDU1LC05MTk1NDg5MTNdfQ==
 -->
