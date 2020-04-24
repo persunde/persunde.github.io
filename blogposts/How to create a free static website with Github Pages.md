@@ -79,7 +79,7 @@ If you **have your own domain:**
 
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build"
-If you **do NOT have your own domain** you need to add a **CNAME** file with your domain to the root of your 
+If you **do NOT have your own domain** you need to add a **CNAME** file with your domain to the root of your deployment folder:
 
     "predeploy": "npm run build && echo \"mydomain.com\" > build/CNAME",
     "deploy": "gh-pages -b master -d build"
@@ -102,6 +102,7 @@ At the end your file should look something like this:
 	    "name": "my-app",
 	    "version": "0.1.0",
 	    "private": true,
+	    "homepage": "https://mydomain.com/"
 	    "dependencies": {
 		    "@testing-library/jest-dom": "^4.2.4",
 		    "@testing-library/react": "^9.3.2",
@@ -143,7 +144,7 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MTM2MzY2NCwtNjkwMzgzMTg5LDc1Mj
+eyJoaXN0b3J5IjpbLTUxMDc2MDY0MiwtNjkwMzgzMTg5LDc1Mj
 Y1MDkyNSw2MTM3NTU1MDYsLTIwNjUwNjQwNTUsLTkxOTU0ODkx
 M119
 -->
