@@ -31,11 +31,10 @@ In my case, my username is **persunde**, so my branch was named:
 
     persunde.github.io
 
-Create a file called README.md file in your branch.
+Create a file called README.md file in your repository.
 
-3 - Download NPM
-  Download NPM:
-  To avoid conflictis avoid downloading NPM via package managers and using sudo. It may cause uneccesary problems and headaces.
+## 3 - Download NPM
+If you dont have it already you need to download NPM. To avoid future conflicts you should download the NPM via a package managers and using sudo. It may cause uneccesary problems and headaces.
   https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm
   https://github.com/nvm-sh/nvm#installing-and-updating
 
@@ -219,6 +218,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMTExOTI4Myw2MTM3NTU1MDYsLTIwNj
-UwNjQwNTUsLTkxOTU0ODkxM119
+eyJoaXN0b3J5IjpbOTY3NTYwMjU0LDYxMzc1NTUwNiwtMjA2NT
+A2NDA1NSwtOTE5NTQ4OTEzXX0=
 -->
