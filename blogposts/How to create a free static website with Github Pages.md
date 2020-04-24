@@ -136,6 +136,16 @@ At the end your file should look similar to this:
 	    }
     }
 
+## Create a dev branch
+You are required to publish your site through the master branch, therefore you should create a new dev branch first.
+
+Run th
+    git status
+    git add .
+    git commit -m 'creating dev branch to keep gobbledygook separate'
+    git co -b your-branch-name-here
+    git push
+
 ## Deploy your site
 Run
 
@@ -149,7 +159,7 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE3ODY1MTI2LC01MTA3NjA2NDIsLTY5MD
+eyJoaXN0b3J5IjpbMzAwMDQ1NzE2LC01MTA3NjA2NDIsLTY5MD
 M4MzE4OSw3NTI2NTA5MjUsNjEzNzU1NTA2LC0yMDY1MDY0MDU1
 LC05MTk1NDg5MTNdfQ==
 -->
