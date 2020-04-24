@@ -163,7 +163,7 @@ To deploy your site and new changes you make to your site, execute this command 
 
 	npm run deploy
 
-NOTE: **DO NOT PULL ON THE GITHUB MASTER BRANCH**, THIS IS ONLY FOR DEPLOYING THE SITE
+NOTE: **DO NOT PULL ON THE GITHUB MASTER BRANCH**, THIS IS ONLY USED FOR DEPLOYING THE SITE
 
 ## Publish a File
 
@@ -173,7 +173,7 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIyMDM0OTQ1LDExMjYxNzY5MzQsLTUxMD
-c2MDY0MiwtNjkwMzgzMTg5LDc1MjY1MDkyNSw2MTM3NTU1MDYs
-LTIwNjUwNjQwNTUsLTkxOTU0ODkxM119
+eyJoaXN0b3J5IjpbLTYxMzA5NTUwNCwxMTI2MTc2OTM0LC01MT
+A3NjA2NDIsLTY5MDM4MzE4OSw3NTI2NTA5MjUsNjEzNzU1NTA2
+LC0yMDY1MDY0MDU1LC05MTk1NDg5MTNdfQ==
 -->
