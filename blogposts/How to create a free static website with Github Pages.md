@@ -36,12 +36,9 @@ Create a file called README.md file in your repository.
 ## 3 - Download NPM
 If you dont have it already you need to download NPM. To avoid future conflicts avoid downloading NPM via package managers and while using sudo. It may cause unnecessary problems and headaches.
 Instead download NPM as described here:
+https://github.com/nvm-sh/nvm#installing-and-updating
 
-> https://github.com/nvm-sh/nvm#installing-and-updating
-> You canhttps://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm
-
-
-Basically you need to do this:
+Basically you need to do execute these three commands:
 
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
     
@@ -49,8 +46,10 @@ Basically you need to do this:
     
     export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-4 Create your React App
-  Here we will use Create-React-App, you can use any other tool you want, you just need a static webpage template up and running.
+> Other installation methods: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm
+
+## 4 Create your React App
+Here we will use Create-React-App, you can use any other tool you want, you just need a static webpage template up and running.
   Use create-react-app to create your react application.
   First clone your repository, then cd into your repository folder, next run these commands to create your React app:
     npx create-react-app my-app
@@ -225,6 +224,6 @@ C --> D
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NTA3MDI4Niw2MTM3NTU1MDYsLTIwNj
-UwNjQwNTUsLTkxOTU0ODkxM119
+eyJoaXN0b3J5IjpbNzUyNjUwOTI1LDYxMzc1NTUwNiwtMjA2NT
+A2NDA1NSwtOTE5NTQ4OTEzXX0=
 -->
