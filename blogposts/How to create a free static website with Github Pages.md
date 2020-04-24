@@ -27,9 +27,9 @@ Create a new repository, and name it:
 
     myusername.github.io
 
-In my case, my username is persunde, so my branch was named:
+In my case, my username is **persunde**, so my branch was named:
 
-    **persunde**.github.io
+    persunde.github.io
 
 Create a README.md file in your branch.
 
@@ -219,6 +219,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUwMzgxMTcwLC0yMDY1MDY0MDU1LC05MT
+eyJoaXN0b3J5IjpbNjEzNzU1NTA2LC0yMDY1MDY0MDU1LC05MT
 k1NDg5MTNdfQ==
 -->
