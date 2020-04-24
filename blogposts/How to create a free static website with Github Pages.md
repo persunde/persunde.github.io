@@ -11,11 +11,10 @@ In this guide we will use Gihub Pages and this page is hosted on Github Pages us
 2. Create a new branch called myusername.github.io
 	* Make sure you change "myusername" with your Github username  
 3. Download NPM
-4. Innitialize your site
+4. Initialize your site 
 5. Download gh-pages tools
-  gh-pages
-6. Deply your site
-7. Buy a domain and link it to your Github Pages site
+6. Deploy your site
+7. Buy a domain and link it to your personal Github Pages website
 
 
 Step 1:
@@ -219,5 +218,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjUwNjQwNTUsLTkxOTU0ODkxM119
+eyJoaXN0b3J5IjpbLTE0ODQ0NTExNTQsLTIwNjUwNjQwNTUsLT
+kxOTU0ODkxM119
 -->
