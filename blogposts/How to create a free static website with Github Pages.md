@@ -31,7 +31,7 @@ In my case, my username is **persunde**, so my branch was named:
 
     persunde.github.io
 
-Create a README.md file in your branch.
+Create a file called README.md file in your branch.
 
 3 - Download NPM
   Download NPM:
@@ -219,6 +219,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEzNzU1NTA2LC0yMDY1MDY0MDU1LC05MT
-k1NDg5MTNdfQ==
+eyJoaXN0b3J5IjpbMTAyMTExOTI4Myw2MTM3NTU1MDYsLTIwNj
+UwNjQwNTUsLTkxOTU0ODkxM119
 -->
