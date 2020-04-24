@@ -156,8 +156,10 @@ Go to your repos
  4. Change default branch **from master to dev**
 
 ![Change default branch](https://i.imgur.com/fJwFIck.png)
+
+
 ## Deploy your site
-Run
+To deploy your site and new changes you make to your site, execute this command in the root of your project folder:
 
 	npm run deploy
 
@@ -169,7 +171,7 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg2MTM2MjMzLDExMjYxNzY5MzQsLTUxMD
-c2MDY0MiwtNjkwMzgzMTg5LDc1MjY1MDkyNSw2MTM3NTU1MDYs
-LTIwNjUwNjQwNTUsLTkxOTU0ODkxM119
+eyJoaXN0b3J5IjpbLTE1MTEwMTgyMywxMTI2MTc2OTM0LC01MT
+A3NjA2NDIsLTY5MDM4MzE4OSw3NTI2NTA5MjUsNjEzNzU1NTA2
+LC0yMDY1MDY0MDU1LC05MTk1NDg5MTNdfQ==
 -->
