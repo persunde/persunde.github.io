@@ -96,7 +96,7 @@ If you **do NOT have your own domain** you need to add a **CNAME** file with you
 > your project:  
 > https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
 
-At the end your file should look something like this:
+At the end your file should look similar to this:
 
     {
 	    "name": "my-app",
@@ -116,7 +116,7 @@ At the end your file should look something like this:
 		    "build": "react-scripts build",
 		    "test": "react-scripts test",
 		    "eject": "react-scripts eject"
-		    "predeploy": "npm run build && echo \"mydomain.com\" > build/CNAME",
+		    "predeploy": "npm run build && echo \"mydomain.com\" > build/CNAME", 
 		    "deploy": "gh-pages -b master -d build"
 	    },
 	    "eslintConfig": {
@@ -136,6 +136,11 @@ At the end your file should look something like this:
 	    }
     }
 
+## Deploy your site
+Run
+
+	npm run deploy
+
 ## Publish a File
 
 You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
@@ -144,7 +149,7 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMDc2MDY0MiwtNjkwMzgzMTg5LDc1Mj
-Y1MDkyNSw2MTM3NTU1MDYsLTIwNjUwNjQwNTUsLTkxOTU0ODkx
-M119
+eyJoaXN0b3J5IjpbNTE3ODY1MTI2LC01MTA3NjA2NDIsLTY5MD
+M4MzE4OSw3NTI2NTA5MjUsNjEzNzU1NTA2LC0yMDY1MDY0MDU1
+LC05MTk1NDg5MTNdfQ==
 -->
