@@ -75,9 +75,12 @@ Or
 	"homepage": "https://mydomain.com/"
 
 At the bottom of **"scripts"** in the same file add:
+If you have your own domain, see 8
 
     "predeploy": "npm run build && echo \"mydomain.com\" > build/CNAME",
     "deploy": "gh-pages -b master -d build"
+If you dont have your own domain
+
 
 > **NOTE:** If you are using **NEXT.JS**  do this instead:
 > 
@@ -138,7 +141,7 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE5NjAxMDYyLC02OTAzODMxODksNzUyNj
+eyJoaXN0b3J5IjpbODc3MTE2NTY2LC02OTAzODMxODksNzUyNj
 UwOTI1LDYxMzc1NTUwNiwtMjA2NTA2NDA1NSwtOTE5NTQ4OTEz
 XX0=
 -->
