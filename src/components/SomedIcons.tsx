@@ -12,8 +12,6 @@ interface SomedIconsProps {
 const SomedIcons: React.FunctionComponent<SomedIconsProps> = (
   props
 ) => {
-  const [modal, setModal] = useState(false);
-
   return (        
   <div className="Socialmedia-div">
     <span className="Socialmedia-icon">

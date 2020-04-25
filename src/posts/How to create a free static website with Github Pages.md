@@ -1,5 +1,9 @@
-# How to create a free static website with Github Pages
-
+﻿---
+title: How to create a free static website with Github Pages
+author: 'Per Sunde '
+date: '2019-07-10T16:04:44.000Z'
+hero_image: ../static/octocat_fluid.png
+---
 You can get your own personal website at no cost. And if you want to have your own personal domain, all you need to do is buy is your own domain and you are covered!
 There is one caveat, your website has to be made up of only static  files with no server side logic. This works well, for things like blogs, Single Page Applications or simple webpages for small companies and restaurants.
 
@@ -164,14 +168,3 @@ To deploy your site and new changes you make to your site, execute this command 
 	npm run deploy
 
 NOTE: **DO NOT PULL ON THE GITHUB MASTER BRANCH**, THIS IS ONLY USED FOR DEPLOYING THE SITE
-
-## Publish a File
-
-You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
-
-- Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMzA5NTUwNF19
--->
