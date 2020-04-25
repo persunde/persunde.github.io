@@ -8,10 +8,11 @@
   "scripts": {
     "dev": "next src",
     "develop": "yarn dev",
-    "build": "next build src",
-    "start": "next start src",
-    "export": "next export src",
-    "deploy": "yarn build && yarn export"
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "predeploy": "next build && next export && echo \"sunde.dev\" > out/CNAME && touch out/.nojekyll",
+    "deploy": "gh-pages -b master -d out --dotfiles true"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
@@ -38,7 +39,8 @@
     "@types/react": "^16.9.34",
     "next-compose-plugins": "^2.2.0",
     "prettier": "^1.18.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "gh-pages": "^2.2.0"
   },
   "keywords": [
     "next"

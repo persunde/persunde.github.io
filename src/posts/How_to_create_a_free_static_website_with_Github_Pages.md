@@ -2,7 +2,7 @@
 title: How to create a free static website with Github Pages
 author: 'Per Sunde '
 date: '2019-07-10T16:04:44.000Z'
-hero_image: ../static/octocat_fluid.png
+hero_image: /static/octocat_fluid.png
 ---
 You can get your own personal website at no cost. And if you want to have your own personal domain, all you need to do is buy is your own domain and you are covered!
 There is one caveat, your website has to be made up of only static  files with no server side logic. This works well, for things like blogs, Single Page Applications or simple webpages for small companies and restaurants.
@@ -90,7 +90,7 @@ If you **do NOT have your own domain** you need to add a **CNAME** file with you
 
 > **NOTE:** If you are using **NEXT.JS**  do this instead:
 > 
->     "predeploy": "next build && next export -o build/ && echo \"mydomain.com\" > build/CNAME && touch build/.nojekyll",
+>     "predeploy": "next build && next export && echo \"mydomain.com\" > build/CNAME && touch out/.nojekyll",
 >     "deploy": "gh-pages -b master -d build --dotfiles true"
 > 
 > Github uses Jekyll to build your site, and it removes all files and
@@ -128,14 +128,14 @@ At the end your file should look similar to this:
 	    },
 	    "browserslist": {
 		    "production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
+					">0.2%",
+					"not dead",
+					"not op_mini all"
 		    ],
 		     "development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
+					"last 1 chrome version",
+					"last 1 firefox version",
+					"last 1 safari version"
 		   ]
 	    }
     }
