@@ -1,3 +1,9 @@
+---
+title: How to create a free static website with Github Pages
+author: 'Per Sunde '
+date: '2020-04-25T15:23:44.000Z'
+hero_image: ../static/octocat_fluid.png
+---
 You can get your own personal website at no cost. And if you want to have your own personal domain, all you need to do is buy is your own domain and you are covered!
 There is one caveat, your website has to be made up of only static  files with no server side logic. This works well, for things like blogs, Single Page Applications or simple webpages for small companies and restaurants.
 
@@ -187,5 +193,5 @@ Write in your custom domain and select Enforce HTTPS. It will take a few minute 
 
 Now your site should be up and running.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTk5MzUxNzRdfQ==
+eyJoaXN0b3J5IjpbLTc4NDYwMTE0XX0=
 -->
