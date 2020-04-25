@@ -1,7 +1,7 @@
-﻿---
+---
 title: How to create a free static website with Github Pages
 author: 'Per Sunde '
-date: '2019-07-10T16:04:44.000Z'
+date: '2020-04-25T15:23:44.000Z'
 hero_image: /static/octocat_fluid.png
 ---
 You can get your own personal website at no cost. And if you want to have your own personal domain, all you need to do is buy is your own domain and you are covered!
@@ -15,10 +15,13 @@ In this guide we will use Gihub Pages and this page is hosted on Github Pages us
 2. Create a new branch called myusername.github.io
 	* Make sure you change "myusername" with your Github username  
 3. Download NPM
-4. Initialize your site 
-5. Download gh-pages tools
-6. Deploy your site
-7. Buy a domain and link it to your personal Github Pages website
+4. Create your React App 
+5. Install gh-pages package
+6. Setup deployment config
+7. Create a dev branch
+8. Deploy your site
+9. Buy a domain and link it to your personal Github Pages website
+10. Setup HTTPS on your Github Page 
 
 
 ## 1 Create an Github account
@@ -128,19 +131,19 @@ At the end your file should look similar to this:
 	    },
 	    "browserslist": {
 		    "production": [
-					">0.2%",
-					"not dead",
-					"not op_mini all"
+			">0.2%",
+			"not dead",
+			"not op_mini all"
 		    ],
 		     "development": [
-					"last 1 chrome version",
-					"last 1 firefox version",
-					"last 1 safari version"
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
 		   ]
 	    }
     }
 
-## Create a dev branch
+## 7 Create a dev branch
 You are required to publish your site through the master branch, and when you deploy the master branch will be overwritten. Therefore you should create a new dev branch first.
 
 Run these commands in your project folder
@@ -162,9 +165,30 @@ Go to your repos
 ![Change default branch](https://i.imgur.com/fJwFIck.png)
 
 
-## Deploy your site
+## 8 Deploy your site
 To deploy your site and new changes you make to your site, execute this command in the root of your project folder:
 
 	npm run deploy
 
 NOTE: **DO NOT PULL ON THE GITHUB MASTER BRANCH**, THIS IS ONLY USED FOR DEPLOYING THE SITE
+
+## 9 Buy your own domain
+Buy any domain from a domain register like  [Namecheap.com](https://www.namecheap.com/).
+After you bougth your domain you need to point it to your Github Pages site, at myusername.github.io. You need to set these values in the website where you bought the domain:
+ - Set **CNAME Recort** to host to "www" and value to "myusername.github.io."
+ - Add four **A Records**, all with host "@"
+	 - 185.199.108.153
+	 - 185.199.109.153
+	 - 185.199.110.153
+	 - 185.199.111.153
+
+![Domain setup](https://i.imgur.com/jkxj1HL.png)
+## 10 Setup HTTPS on your Github Page
+Go to your github project, select **setting** in the top right corner.
+Scroll down until you find the Github Pages settings.
+Write in your custom domain and select Enforce HTTPS. It will take a few minute until you will receive the SSL Certificate for the site. Github will take care of it for you.
+![Add your custum domain and enforce HTTPS](https://i.imgur.com/UnU1uGR.png)If you setup the deployment correctly, the custom domain should be automatically set, it is defined by the CNAME file in the root of your master branch, so **make sure you dont overwrite it** with bad data.
+
+> **NOTE**: If you use a **.dev** domain you HAVE to use HTTPS.
+
+Now your site should be up and running.
