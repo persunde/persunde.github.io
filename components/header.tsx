@@ -9,13 +9,13 @@ export default function Header(props) {
         role="navigation"
         aria-label="main navigation"
       >
-        <Link href="/">
-          <h1>{SITE_NAME}</h1>
+        <Link href="/blog">
+          <h1>{SITE_NAME}/blog</h1>
         </Link>
         <div>
           <Link href={`${typeof window !== "undefined" &&
           window.location.pathname == "/info" ?
-          "/blog" : "/info"}`}>
+          "/blog" : "/"}`}>
             <h1>{`${typeof window !== "undefined" &&
           window.location.pathname == "/info" ?
           "close" : "info"}`}</h1>
