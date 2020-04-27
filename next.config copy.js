@@ -5,8 +5,9 @@
 //       use: 'raw-loader',
 //     })
 //     return config
-//   }
+//   },
 // }
+
 
 const withLess = require('@zeit/next-less')
 const withSass = require('@zeit/next-sass');
