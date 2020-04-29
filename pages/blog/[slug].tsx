@@ -10,8 +10,8 @@ import { SITE_NAME } from '../../lib/constants'
 interface posts {
   post: {
     title: string,
-    ogImage: { url: string,},
-    coverImage: string,
+    // ogImage: { url: string,},
+    featuredImage: string,
     date: string,
     author: string,
     content: string
@@ -28,11 +28,11 @@ export default function Post({ post } : posts) {
               <title>
                 {post.title} | {SITE_NAME}
               </title>
-              <meta property="og:image" content={post.ogImage.url} />
+              <meta property="og:image" content={post.featuredImage} />
             </Head>
             <PostHeader
               title={post.title}
-              coverImage={post.coverImage}
+              featuredImage={post.featuredImage}
               date={post.date}
               author={post.author}
             />
@@ -57,8 +57,8 @@ export async function getStaticProps({ params }: slugParams) {
     'slug',
     'author',
     'content',
-    'ogImage',
-    'coverImage',
+    // 'ogImage',
+    'featuredImage',
   ])
   // const content = await markdownToHtml(post.content || '')
 

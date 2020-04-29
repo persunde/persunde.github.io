@@ -30,7 +30,7 @@ export function getPostBySlug(slug, fields = []) {
     }
 
     if (data[field]) {
-      if (data[field] == "coverImage" || field == "coverImage") {
+      if (field == "featuredImage") {
         items[field] = findImgLocation(data[field])
       } else {
         items[field] = data[field]
@@ -45,10 +45,6 @@ export function getAllPosts(fields = []) {
   const slugs = getPostSlugs()
   return slugs.map(slug => getPostBySlug(slug, fields))
 }
-
-// coverImage: '/assets/blog/github-pages/github-pages.png'
-// ogImage:
-//   url: '/assets/blog/github-pages/github-pages.png'
 
 const getDirectories = source =>
   readdirSync(source, { withFileTypes: true })

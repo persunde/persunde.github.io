@@ -22,7 +22,7 @@ export default function Blog({ allPosts }) {
         {heroPost && (
           <HeroPost
             title={heroPost.title}
-            coverImage={heroPost.coverImage}
+            featuredImage={heroPost.featuredImage}
             date={heroPost.date}
             author={heroPost.author}
             slug={heroPost.slug}
@@ -41,7 +41,7 @@ export async function getStaticProps() {
     'date',
     'slug',
     'author',
-    'coverImage',
+    'featuredImage',
     'excerpt',
   ])
 
