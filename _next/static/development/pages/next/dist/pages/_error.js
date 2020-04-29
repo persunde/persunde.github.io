@@ -17,25 +17,28 @@ module.exports = _interopRequireDefault;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js!./":
-/*!***************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
-  \***************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js&hotRouterUpdates=true!./":
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js&hotRouterUpdates=true ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/next/dist/pages/_error", function() {
-      var mod = __webpack_require__(/*! ./node_modules/next/dist/pages/_error.js */ "./node_modules/next/dist/pages/_error.js")
-      if(true) {
-        module.hot.accept(/*! ./node_modules/next/dist/pages/_error.js */ "./node_modules/next/dist/pages/_error.js", function() {
-          if(!next.router.components["/next/dist/pages/_error"]) return
-          var updatedPage = __webpack_require__(/*! ./node_modules/next/dist/pages/_error.js */ "./node_modules/next/dist/pages/_error.js")
-          next.router.update("/next/dist/pages/_error", updatedPage)
-        })
+    (window.__NEXT_P = window.__NEXT_P || []).push([
+      "/next/dist/pages/_error",
+      function () {
+        var mod = __webpack_require__(/*! ./node_modules/next/dist/pages/_error.js */ "./node_modules/next/dist/pages/_error.js");
+        if (true) {
+          module.hot.accept(/*! ./node_modules/next/dist/pages/_error.js */ "./node_modules/next/dist/pages/_error.js", function () {
+            if (!next.router.components["/next/dist/pages/_error"]) return;
+            var updatedPage = __webpack_require__(/*! ./node_modules/next/dist/pages/_error.js */ "./node_modules/next/dist/pages/_error.js");
+            next.router.update("/next/dist/pages/_error", updatedPage);
+          });
+        }
+        return mod;
       }
-      return mod
-    }]);
+    ]);
   
 
 /***/ }),
@@ -510,14 +513,14 @@ module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0
 
 /***/ }),
 
-/***/ 2:
-/*!*******************************************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
-  \*******************************************************************************************************************************************************************************************************/
+/***/ 1:
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js&hotRouterUpdates=true ***!
+  \*****************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js&hotRouterUpdates=true! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js&hotRouterUpdates=true!./");
 
 
 /***/ }),
@@ -533,5 +536,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_error.js.map

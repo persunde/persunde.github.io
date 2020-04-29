@@ -44031,25 +44031,28 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog%2F%5Bslug%5D&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fpages%2Fblog%2F%5Bslug%5D.tsx!./":
-/*!***********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog%2F%5Bslug%5D&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fpages%2Fblog%2F%5Bslug%5D.tsx ***!
-  \***********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog%2F%5Bslug%5D&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fpages%2Fblog%2F%5Bslug%5D.tsx&hotRouterUpdates=true!./":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog%2F%5Bslug%5D&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fpages%2Fblog%2F%5Bslug%5D.tsx&hotRouterUpdates=true ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/blog/[slug]", function() {
-      var mod = __webpack_require__(/*! ./pages/blog/[slug].tsx */ "./pages/blog/[slug].tsx")
-      if(true) {
-        module.hot.accept(/*! ./pages/blog/[slug].tsx */ "./pages/blog/[slug].tsx", function() {
-          if(!next.router.components["/blog/[slug]"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/blog/[slug].tsx */ "./pages/blog/[slug].tsx")
-          next.router.update("/blog/[slug]", updatedPage)
-        })
+    (window.__NEXT_P = window.__NEXT_P || []).push([
+      "/blog/[slug]",
+      function () {
+        var mod = __webpack_require__(/*! ./pages/blog/[slug].tsx */ "./pages/blog/[slug].tsx");
+        if (true) {
+          module.hot.accept(/*! ./pages/blog/[slug].tsx */ "./pages/blog/[slug].tsx", function () {
+            if (!next.router.components["/blog/[slug]"]) return;
+            var updatedPage = __webpack_require__(/*! ./pages/blog/[slug].tsx */ "./pages/blog/[slug].tsx");
+            next.router.update("/blog/[slug]", updatedPage);
+          });
+        }
+        return mod;
       }
-      return mod
-    }]);
+    ]);
   
 
 /***/ }),
@@ -44997,6 +45000,8 @@ function delBasePath(path) {
   return path.indexOf(basePath) === 0 ? path.substr(basePath.length) || '/' : path;
 }
 
+exports.delBasePath = delBasePath;
+
 function toRoute(path) {
   return path.replace(/\/$/, '') || '/';
 }
@@ -45008,8 +45013,8 @@ function fetchNextData(pathname, query, isServerRender, cb) {
 
   function getResponse() {
     return fetch(utils_1.formatWithValidation({
-      // @ts-ignore __NEXT_DATA__
-      pathname: "/_next/data/".concat(__NEXT_DATA__.buildId).concat(pathname, ".json"),
+      pathname: addBasePath( // @ts-ignore __NEXT_DATA__
+      "/_next/data/".concat(__NEXT_DATA__.buildId).concat(delBasePath(pathname), ".json")),
       query
     }), {
       // Cookies are required to be present for Next.js' SSG "Preview Mode".
@@ -45169,12 +45174,17 @@ class Router {
     this.isFallback = isFallback;
 
     if (true) {
-      // in order for `e.state` to work on the `onpopstate` event
-      // we have to register the initial route upon initialization
-      this.changeState('replaceState', utils_1.formatWithValidation({
-        pathname,
-        query
-      }), as);
+      // make sure "as" doesn't start with double slashes or else it can
+      // throw an error as it's considered invalid
+      if (as.substr(0, 2) !== '//') {
+        // in order for `e.state` to work on the `onpopstate` event
+        // we have to register the initial route upon initialization
+        this.changeState('replaceState', utils_1.formatWithValidation({
+          pathname,
+          query
+        }), as);
+      }
+
       window.addEventListener('popstate', this.onPopState);
     }
   } // @deprecated backwards compatibility even though it's a private method.
@@ -45762,11 +45772,16 @@ exports.getRouteMatcher = getRouteMatcher;
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+}); // this isn't importing the escape-string-regex module
+// to reduce bytes
+
+function escapeRegex(str) {
+  return str.replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
+}
 
 function getRouteRegex(normalizedRoute) {
   // Escape all characters that could be considered RegEx
-  const escapedRoute = (normalizedRoute.replace(/\/$/, '') || '/').replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
+  const escapedRoute = escapeRegex(normalizedRoute.replace(/\/$/, '') || '/');
   const groups = {};
   let groupIndex = 1;
   const parameterizedRoute = escapedRoute.replace(/\/\\\[([^/]+?)\\\](?=\/|$)/g, (_, $1) => {
@@ -45779,10 +45794,17 @@ function getRouteRegex(normalizedRoute) {
     };
     return isCatchAll ? '/(.+?)' : '/([^/]+?)';
   });
-  return {
+  let namedParameterizedRoute; // dead code eliminate for browser since it's only needed
+  // while generating routes-manifest
+
+  if (false) {}
+
+  return Object.assign({
     re: new RegExp('^' + parameterizedRoute + '(?:/)?$', 'i'),
     groups
-  };
+  }, namedParameterizedRoute ? {
+    namedRegex: "^".concat(namedParameterizedRoute, "(?:/)?$")
+  } : {});
 }
 
 exports.getRouteRegex = getRouteRegex;
@@ -57088,14 +57110,14 @@ function Post({
 
 /***/ }),
 
-/***/ 3:
-/*!***************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fblog%2F%5Bslug%5D&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fpages%2Fblog%2F%5Bslug%5D.tsx ***!
-  \***************************************************************************************************************************************************************************/
+/***/ 2:
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fblog%2F%5Bslug%5D&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fpages%2Fblog%2F%5Bslug%5D.tsx&hotRouterUpdates=true ***!
+  \*************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fblog%2F%5Bslug%5D&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fpages%2Fblog%2F%5Bslug%5D.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog%2F%5Bslug%5D&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fpages%2Fblog%2F%5Bslug%5D.tsx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fblog%2F%5Bslug%5D&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fpages%2Fblog%2F%5Bslug%5D.tsx&hotRouterUpdates=true! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog%2F%5Bslug%5D&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fpages%2Fblog%2F%5Bslug%5D.tsx&hotRouterUpdates=true!./");
 
 
 /***/ }),
@@ -57111,5 +57133,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[slug].js.map
