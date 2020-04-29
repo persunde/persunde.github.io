@@ -9,13 +9,10 @@
   width: 75vw;
 }
 
-.markdown-body {
-  /* width: 55vw; */
-}
-
-ol {
+.markdown-ol {
   list-style-type: decimal;
 }
+
 /* 
 code {
   font-size: 0.85rem;
