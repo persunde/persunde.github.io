@@ -846,7 +846,7 @@ function MoreStories({
   }, posts.map(post => __jsx(_components_post_preview__WEBPACK_IMPORTED_MODULE_1__["default"], {
     key: post.slug,
     title: post.title,
-    coverImage: post.coverImage,
+    coverImage: post.featuredImage,
     date: post.date,
     author: post.author,
     slug: post.slug,
@@ -22607,7 +22607,7 @@ function Blog({
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /*!***********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fblog&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fpages%2Fblog.tsx&hotRouterUpdates=true ***!
   \***********************************************************************************************************************************************************************/
@@ -22630,5 +22630,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=blog.js.map

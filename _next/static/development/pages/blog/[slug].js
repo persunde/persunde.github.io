@@ -691,12 +691,16 @@ const OrderedListBlock = ({
   ordered,
   children
 }) => {
+  let i = 0;
   const list = children.map(val => {
+    i += 1;
+    const key = i;
     return __jsx("li", {
+      key: key,
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40,
+        lineNumber: 43,
         columnNumber: 12
       }
     }, val.props.children[0].props.children);
@@ -708,7 +712,7 @@ const OrderedListBlock = ({
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44,
+        lineNumber: 47,
         columnNumber: 12
       }
     }, list);
@@ -718,7 +722,7 @@ const OrderedListBlock = ({
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46,
+        lineNumber: 49,
         columnNumber: 12
       }
     }, list);
@@ -57110,7 +57114,7 @@ function Post({
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!*************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fblog%2F%5Bslug%5D&absolutePagePath=%2Fhome%2Fper%2FDocuments%2Fprojects%2Fpersunde.github.io%2Fpages%2Fblog%2F%5Bslug%5D.tsx&hotRouterUpdates=true ***!
   \*************************************************************************************************************************************************************************************************/
@@ -57133,5 +57137,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[slug].js.map
