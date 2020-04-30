@@ -43,7 +43,8 @@ Now you need to select a CSS styling of your choice. I chose the standard GitHub
 ```js
 import  '../node_modules/highlight.js/styles/github.css';
 ```
-> take a look at the highlight.js demo page for an easy and fast way to check out all the styling options you have: https://highlightjs.org/static/demo/
+> take a look at the highlight.js demo page for an easy and fast way to check out all the styling options you have: 
+> https://highlightjs.org/static/demo/
 
 ## Add the code beautifier
 Now we can start to add the beautifier to our code. In the `post-body.tsx ` file import the Highlight component. It is needed to wrap around the text we want to highlight, also import NextPage from the Nextjs library as it is needed by the ReactMarkdown component later on.
