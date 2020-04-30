@@ -1,5 +1,9 @@
 ---
-
+title: How to create a free static website with Github Pages
+author: Per Sunde
+date: '2020-04-29'
+featuredImage: github-pages.jpg
+excerpt: 'Now you can make your own website, all for free with Github Pages'
 
 ---
 
