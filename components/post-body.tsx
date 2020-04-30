@@ -36,8 +36,11 @@ interface  OrderedListBlockProps {
 }
 
 const OrderedListBlock: NextPage<OrderedListBlockProps> = ({ordered, children}: OrderedListBlockProps) => {
+  let i = 0;
   const list = children.map(val => {
-    return <li>{val.props.children[0].props.children}</li>
+    i += 1;
+    const key = i;
+    return <li key={key}>{val.props.children[0].props.children}</li>
   })
 
   if (ordered) {
