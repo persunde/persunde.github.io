@@ -15,7 +15,8 @@ Most guides cover how to setup what they call "Project Pages", but before you ca
 Also if you use Gitlab, they also have a similar service called Gitlab Pages.
 
 
-**NOTE** There is one thing you need to know before you continue. Your website has to be made up of **only static  files with no server side logic**. This works well, for things like blogs, Single Page Applications or simple webpages for small companies and restaurants. Github Pages does not allow you to use your own backend code for this.
+#### NOTE:
+There is one thing you need to know before you continue. Your website has to be made up of **only static  files with no server side logic**. This works well, for things like blogs, Single Page Applications (SPA) or simple webpages for small companies and restaurants. Github Pages does not allow you to use your own backend code, only server static files.
 
 ## Steps
 1. Create a Gihub account if you dont already have one
@@ -32,7 +33,7 @@ Also if you use Gitlab, they also have a similar service called Gitlab Pages.
 
 
 ## 1 Create an Github account
-Go to https://github.com/ and sign up. 
+Go to https://github.com/ and create an account if you do not already have one. 
 
 ## 2 Create a new repository
 Go to: https://github.com/new
@@ -41,14 +42,14 @@ Create a new repository, and name it:
 
     myusername.github.io
 
-In my case, my username is **persunde**, so my branch was named:
+In my case, my Github username is **persunde**, so my branch was named:
 
     persunde.github.io
 
 Create a file called `README.md` file in your repository.
 
 ## 3 InstallDownload NPM
-If you dont have it already you need to download and install NPM (Node Package Manager)NPM. To avoid future conflicts avoid installdownloading NPM via package managers like yum or apt and avoidand while using sudo, i. It may cause unnecessary problems and headaches.
+If you dont have it already you need to download and install NPM (Node Package Manager). To avoid future conflicts avoid installdownloading NPM via package managers like yum or apt and avoidand while using sudo, i. It may cause unnecessary problems and headaches.
 Instead installdownload NPM as described here for Linux, OSX or Windows:
  https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm
  
@@ -86,20 +87,20 @@ Or
 
 	"homepage": "https://mydomain.com/"
 
-At the bottom of **"scripts"** in file **package.json** in the same file add, one of the two options below:
-1. **I have my own domain**
+Choose one of the two options below:
+1. **I have my own domain:**
 You need to add a **CNAME** file with your domain to the root of your deployment folder:
-	
-		  "predeploy": "npm run build && echo \"www.mydomain.com\" > build/CNAME",
-		  "deploy": "gh-pages -b master -d build"
-	 This creates
-2. **I do NOT have my own domain**
-You need to add a **CNAME** file and puts it in your build/ directory so that it is uploaded with your deployment.
-
-3. **I do NOT have my own domain**with your domain to the root of your deployment folder:
-
-	    "predeploy": "npm run build",
-	    "deploy": "gh-pages -b master -d build"
+Add this to  the bottom of **"scripts"** in file **package.json**;
+```bash
+"predeploy": "npm run build && echo \"www.mydomain.com\" > build/CNAME",
+"deploy": "gh-pages -b master -d build"
+```
+2. **I do NOT have my own domain:**
+Add this to  the bottom of **"scripts"** in file **package.json**;
+```bash
+"predeploy": "npm run build",
+"deploy": "gh-pages -b master -d build"
+```
 
 > **NOTE:** If you are using **NEXT.JS**  do this instead:
 > 
@@ -113,7 +114,7 @@ You need to add a **CNAME** file and puts it in your build/ directory so that it
 > your project:  
 > https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
 
-Now wWhen you run 
+Now when you run 
 	
 	npm run deploy
 	
@@ -124,14 +125,11 @@ then the predeploy script will be run first, and then gh-pages takes over and pu
 First `npm run build` builds your project and moves the output in the build/ directory. 
 `echo \"www.mydomain.com\" > build/CNAME`  creaIf you are wondering about the paremeters a file called CNAME containing the text "www.mydomain.com" and places it in the build/ folder.
 
-    given to gh-pages 
- - **-b master -d build
-
-You run the gh-pages tool that pushes your files to the github repository. `-b master` means ** means you are pushing to branch master, by defaulty gh-pages pushes to the "gh-pages" branch. But we want this to be on the master branch, otherwise your first Github Pages site will not work.
-`-d build`  sets the source directory that will be pushed to the
- - **-d build** means gh.pages will push the build/ directory to your repository
-
- means 
+```
+gh-pages -b master -d build
+```
+This runs the gh-pages tool that pushes your files to the github repository. `-b master` means ** means you are pushing to branch master, by defaulty gh-pages pushes to the "gh-pages" branch. But we want this to be on the master branch, otherwise your first Github Pages site will not work.
+`-d build`  sets the source directory that `gh-pages` will push your output code to. `-d build` means gh-pages will use the `build/` directory as the source.
 
 At the end your file should look similar to this:
 
@@ -200,7 +198,7 @@ To deploy your site and new changes you make to your site, execute this command 
 
 	npm run deploy
 
-NOTE: **DO NOT PULL ON THE GITHUB MASTER BRANCH**, THIS IS ONLY USED FOR DEPLOYING THE SITE
+**NOTE: Do not `git pull` on the master-branch** it is only used to push your ready made site through `gh-pages` and `npm run deploy`
 
 ## 9 Buy your own domain
 Buy any domain from a domain register like  [Namecheap.com](https://www.namecheap.com/).
