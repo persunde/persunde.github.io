@@ -9,7 +9,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "predeploy": "sh remove_stackedit_meta.sh && next build && next export && echo \"sunde.dev\" > out/CNAME && touch out/.nojekyll",
+    "predeploy": "next build && next export && echo \"sunde.dev\" > out/CNAME && touch out/.nojekyll",
     "deploy": "gh-pages -b master -d out --dotfiles true"
   },
   "dependencies": {
