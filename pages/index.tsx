@@ -7,7 +7,7 @@ export default function Home() {
     <div className="App">
       <Head>
         <title>per.sunde.developer</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
 
       <header className="App-header">
