@@ -9592,9 +9592,9 @@ function Home() {
       lineNumber: 9,
       columnNumber: 9
     }
-  }, "Create Next App"), __jsx("link", {
+  }, "per.sunde.developer"), __jsx("link", {
     rel: "icon",
-    href: "/favicon.ico",
+    href: "/favicon/favicon.ico",
     __self: this,
     __source: {
       fileName: _jsxFileName,
