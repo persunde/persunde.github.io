@@ -17,7 +17,11 @@ __webpack_require__.r(__webpack_exports__);
 
 const initGA = () => {
   console.log('GA init');
-  react_ga__WEBPACK_IMPORTED_MODULE_0__["default"].initialize('UA-166119494-1');
+  react_ga__WEBPACK_IMPORTED_MODULE_0__["default"].initialize('UA-166119494-1', {
+    gaOptions: {
+      siteSpeedSampleRate: 100
+    }
+  });
 };
 const logPageView = () => {
   console.log("Logging pageview for ".concat(window.location.pathname));
