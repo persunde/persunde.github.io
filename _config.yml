@@ -1,0 +1,5 @@
+plugins:
+  - jekyll-feed
+title: Sunde’s blog
+description: Welcome to my blog about tech and stuff
+author: sunde.dev
