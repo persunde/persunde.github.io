@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown'
-import Highlight from 'react-highlight';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import vscDarkPlus from "../styles/vsc-dark-plus";
 import { NextPage } from 'next';
 
 
@@ -16,19 +17,16 @@ export default function PostBody({ content }) {
   )
 }
 
-interface  HighlightCodeProps {
-	value: any;
-}
-
-const  HighlightCode: NextPage<HighlightCodeProps> = ({ value }) => {
-	return (
-		<div>
-			<Highlight>
-				{value}
-			</Highlight>
-		</div>
-	)
-}
+const HighlightCode = ({ language, value }) => {
+  return (
+    <SyntaxHighlighter 
+      language={language} 
+      style={vscDarkPlus}
+    >
+      {value}
+    </SyntaxHighlighter>
+  );
+};
 
 interface  OrderedListBlockProps {
   ordered: boolean, 
@@ -39,8 +37,7 @@ const OrderedListBlock: NextPage<OrderedListBlockProps> = ({ordered, children}: 
   let i = 0;
   const list = children.map(val => {
     i += 1;
-    const key = i;
-    return <li key={key}>{val.props.children[0].props.children}</li>
+    return <li key={i}>{val}</li>
   })
 
   if (ordered) {
