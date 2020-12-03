@@ -14,7 +14,9 @@ interface posts {
     featuredImage: string,
     date: string,
     author: string,
-    content: string
+    content: string,
+    readingTime: string,
+    tags: string[],
   }
 }
 
@@ -35,6 +37,8 @@ export default function Post({ post } : posts) {
               featuredImage={post.featuredImage}
               date={post.date}
               author={post.author}
+              readingTime={post.readingTime}
+              tags={post.tags}
             />
             <PostBody content={post.content} />
           </article>
@@ -59,6 +63,8 @@ export async function getStaticProps({ params }: slugParams) {
     'content',
     // 'ogImage',
     'featuredImage',
+    'readingTime',
+    'tags',
   ])
   // const content = await markdownToHtml(post.content || '')
 

@@ -10,6 +10,7 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
+  readingTime,
 }) {
   return (
     <div>
@@ -23,6 +24,9 @@ export default function PostPreview({
       </h3>
       <div className="text-lg mb-4">
         <DateFormater dateString={date} />
+      </div>
+      <div>
+        {readingTime}
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author} />

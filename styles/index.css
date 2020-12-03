@@ -13,24 +13,6 @@
   list-style-type: decimal;
 }
 
-/* 
-code {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
+.markdown-ul {
+  list-style: disc;
 }
-
-pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 0.85rem;
-  line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  overflow: auto;
-  word-wrap: normal;
-  padding: 1.45rem;
-  background: #282f2f;
-}
- */

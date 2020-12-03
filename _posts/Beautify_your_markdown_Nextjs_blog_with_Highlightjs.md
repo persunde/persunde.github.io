@@ -1,7 +1,7 @@
 ---
 title: Beautify your markdown Nextjs blog with Highlightjs
 author: Per Sunde
-tags: 'Nextjs, Next.js, blog, beautify, beautify code, code highlighter'
+tags: 'Next.js, markdown, beautify code, code highlighter'
 excerpt: >-
   Do you want to add code beautifier to your markdown blogg? By using
   Highlight.js with React-Markdown you can easily make your markdown blog
@@ -165,7 +165,7 @@ interface  ListBlockProps {
   
 const  OrderedListBlock: NextPage<ListBlockProps> = ({ordered, children}: OrderedListBlockProps) => {
 	const  list = children.map(val  => {
-		return  <li>{val.props.children[0].props.children}</li>
+		return  <li>{val}</li>
 	})
 	  
 	if (ordered) {

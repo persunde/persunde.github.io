@@ -5,6 +5,7 @@ import { readdirSync, statSync } from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 import { fail } from 'assert'
+import readingTime from 'reading-time'
 
 const postsDirectory = join(process.cwd(), '_posts')
 
@@ -28,9 +29,12 @@ export function getPostBySlug(slug, fields = []) {
     if (field === 'content') {
       items[field] = content
     }
+    if (field === 'readingTime') {
+      items[field] = readingTime(content).text;
+    }
 
     if (data[field]) {
-      if (field == "featuredImage") {
+      if (field === "featuredImage") {
         items[field] = findImgLocation(data[field])
       } else {
         items[field] = data[field]
