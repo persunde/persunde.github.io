@@ -30,6 +30,11 @@ export default function Home() {
               <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Blog</a>
             </Link>
           </span>
+          <span>
+            <Link href="/oss-looking-for-funding">
+              <a className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">Support your OSS?</a>
+            </Link>
+          </span>
         </div>
         <p>
           Per Sunde fullstack developer
