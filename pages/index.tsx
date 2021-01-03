@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import SomedIcons from '../components/somed-icons'
-import Image from 'next/image'
 
 export default function Home() {
   return (
