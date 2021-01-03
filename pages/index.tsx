@@ -14,7 +14,7 @@ export default function Home() {
       <header className="App-header">
         <div>
         <figure className="h-32 w-32" style={{display: 'inline-block'}}>
-          <img alt="Per Sunde" className="is-rounded" src="/assets/index/annonperson.png"/>
+          <img alt="Per Sunde" className="rounded-full" src="/assets/index/geneve-anime.jpeg"/>
         </figure>
         </div>
         <SomedIcons
