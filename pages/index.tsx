@@ -32,14 +32,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="space-y-1">
-            <div>Per Sunde fullstack developer</div>
-            <div className="pr-2">
-              <Link href="/assets/cv/cv.pdf">
-                <a className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full padding">My CV</a>
-              </Link>
-            </div>
-          </div>
         </div>
       </header>
     </div>
