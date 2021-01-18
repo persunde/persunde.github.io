@@ -14,7 +14,7 @@ import '../node_modules/highlight.js/styles/github.css';
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
-      <script async defer data-website-id="6f010a0e-212e-48c0-95dc-f7e8d8541cdb" src="https://analytics.nordictechjobs.com/umami.js"></script>
+      <script async defer data-website-id="cf736c86-83fe-4aa8-a589-dcdc16b8498e" src="https://analytics.nordictechjobs.com/umami.js"></script>
       <Component {...pageProps} />
     </>
   )
