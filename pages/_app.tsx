@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { config, library } from '@fortawesome/fontawesome-svg-core'
-import Router from 'next/router'
-import { initGA, logPageView } from '../lib/analytics'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { faBars, faUser } from '@fortawesome/free-solid-svg-icons'
@@ -14,11 +12,10 @@ import '../node_modules/highlight.js/styles/github.css';
 
 
 export default function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    initGA()
-    logPageView()
-    Router.events.on('routeChangeComplete', logPageView)
-  }, [])
-  
-  return <Component {...pageProps} />
+  return (
+    <>
+      <script async defer data-website-id="6f010a0e-212e-48c0-95dc-f7e8d8541cdb" src="https://analytics.nordictechjobs.com/umami.js"></script>
+      <Component {...pageProps} />
+    </>
+  )
 }

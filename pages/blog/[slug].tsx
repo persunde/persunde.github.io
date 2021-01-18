@@ -20,7 +20,7 @@ interface posts {
   }
 }
 
-export default function Post({ post } : posts) {
+export default function Post({ post } : posts) {  
   return (
     <Layout>
       <Header />
