@@ -10,7 +10,12 @@ import readingTime from 'reading-time'
 const postsDirectory = join(process.cwd(), '_posts')
 
 export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory)
+  const files = fs.readdirSync(postsDirectory)
+  files.sort(function(a, b) {
+      return fs.statSync(join(postsDirectory, b)).mtime.getTime() - 
+            fs.statSync(join(postsDirectory, a)).mtime.getTime();
+  });
+  return files
 }
 
 export function getPostBySlug(slug, fields = []) {
