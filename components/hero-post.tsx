@@ -2,6 +2,9 @@ import Avatar from '../components/avatar'
 import DateFormater from '../components/date-formater'
 import CoverImage from '../components/cover-image'
 import Link from 'next/link'
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTag } from '@fortawesome/free-solid-svg-icons'
 
 export default function HeroPost({
   title,
@@ -11,6 +14,7 @@ export default function HeroPost({
   author,
   slug,
   readingTime,
+  tags,
 }) {
   return (
     <section>
@@ -30,6 +34,12 @@ export default function HeroPost({
           <div>
             {readingTime}
           </div>
+          <div className="flex items-center space-x-2">
+            <FontAwesomeIcon icon={faTag} /> 
+            <div>
+              {tags}
+            </div>
+        </div>
         </div>
         <div>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>

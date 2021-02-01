@@ -28,6 +28,7 @@ export default function Blog({ allPosts }) {
             slug={heroPost.slug}
             excerpt={heroPost.excerpt}
             readingTime={heroPost.readingTime}
+            tags={heroPost.tags}
           />
         )}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
@@ -45,6 +46,7 @@ export async function getStaticProps() {
     'featuredImage',
     'excerpt',
     'readingTime',
+    'tags',
   ])
 
   return {

@@ -2,6 +2,9 @@ import Avatar from './avatar'
 import DateFormater from './date-formater'
 import CoverImage from './cover-image'
 import Link from 'next/link'
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTag } from '@fortawesome/free-solid-svg-icons'
 
 export default function PostPreview({
   title,
@@ -11,6 +14,7 @@ export default function PostPreview({
   author,
   slug,
   readingTime,
+  tags,
 }) {
   return (
     <div>
@@ -27,6 +31,12 @@ export default function PostPreview({
       </div>
       <div>
         {readingTime}
+      </div>
+      <div className="flex items-center space-x-2">
+          <FontAwesomeIcon icon={faTag} /> 
+          <div>
+            {tags}
+          </div>
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author} />
