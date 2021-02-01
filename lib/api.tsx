@@ -11,10 +11,6 @@ const postsDirectory = join(process.cwd(), '_posts')
 
 export function getPostSlugs() {
   const files = fs.readdirSync(postsDirectory)
-  files.sort(function(a, b) {
-      return fs.statSync(join(postsDirectory, b)).mtime.getTime() - 
-            fs.statSync(join(postsDirectory, a)).mtime.getTime();
-  });
   return files
 }
 
@@ -52,7 +48,11 @@ export function getPostBySlug(slug, fields = []) {
 
 export function getAllPosts(fields = []) {
   const slugs = getPostSlugs()
-  return slugs.map(slug => getPostBySlug(slug, fields))
+  const slugsList = slugs.map(slug => getPostBySlug(slug, fields))
+  const sorted = slugsList.sort((a: any, b: any) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime()
+  })
+  return sorted
 }
 
 const getDirectories = source =>
