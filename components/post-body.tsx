@@ -37,7 +37,7 @@ const OrderedListBlock: NextPage<OrderedListBlockProps> = ({ordered, children}: 
   let i = 0;
   const list = children.map(val => {
     i += 1;
-    return <li key={i}>{val}</li>
+    return val
   })
 
   if (ordered) {
