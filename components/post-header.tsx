@@ -13,7 +13,7 @@ export default function PostHeader({ title, featuredImage, date, author, reading
         <CoverImage title={title} src={featuredImage} slug={undefined} />
       </div>
       <div className="max-w-2xl block mb-6">
-        <div className="flex items-center space-x-4 mb-2">
+        <div className="flex items-center space-x-4 mb-2 flex-wrap">
           <Avatar name={author} />
           <div className="text-lg col-span-2 space-x-2">
             <FontAwesomeIcon icon={faCalendar} />
@@ -27,12 +27,12 @@ export default function PostHeader({ title, featuredImage, date, author, reading
               {readingTime}
             </div>
           </div>
-        </div>
-        <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2">
           <FontAwesomeIcon icon={faTag} /> 
           <div>
             {tags}
           </div>
+        </div>
         </div>
       </div>
     </>

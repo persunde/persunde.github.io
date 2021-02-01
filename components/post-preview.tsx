@@ -4,7 +4,7 @@ import CoverImage from './cover-image'
 import Link from 'next/link'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTag } from '@fortawesome/free-solid-svg-icons'
+import { faClock, faTag } from '@fortawesome/free-solid-svg-icons'
 
 export default function PostPreview({
   title,
@@ -29,8 +29,13 @@ export default function PostPreview({
       <div className="text-lg mb-4">
         <DateFormater dateString={date} />
       </div>
-      <div>
-        {readingTime}
+      <div className="text-lg font-bold col-span-3 flex space-x-2">
+        <div>
+          <FontAwesomeIcon icon={faClock} />
+        </div> 
+        <div>
+          {readingTime}
+        </div>
       </div>
       <div className="flex items-center space-x-2">
           <FontAwesomeIcon icon={faTag} /> 
