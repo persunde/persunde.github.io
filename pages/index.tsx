@@ -5,10 +5,6 @@ import SomedIcons from '../components/somed-icons'
 export default function Home() {
   return (
     <div className="App">
-      <Head>
-        <title>per.sunde.developer</title>
-        <link rel="icon" href="/favicon/favicon.ico" />
-      </Head>
 
       <header className="App-header">
         <div>
