@@ -28,12 +28,6 @@ export default function Home() {
               </Link>
             </div>
             <div>
-            <div className="pb-2">Rate your favorite Star Trek characters</div>
-              <Link href="https://qaplaornot.com/">
-                <a target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">
-                  QaplaOrNot
-                </a>
-              </Link>
             </div>
           </div>
         </div>
