@@ -15,20 +15,20 @@ export default function PostHeader({ title, featuredImage, date, author, reading
       <div className="max-w-2xl block mb-6">
         <div className="flex items-center space-x-4 mb-2 flex-wrap">
           <Avatar name={author} />
-          <div className="text-lg col-span-2 space-x-2">
-            <FontAwesomeIcon icon={faCalendar} />
+          <div className="text-lg col-span-2 space-x-2 flex">
+            <FontAwesomeIcon icon={faCalendar} className='w-6' />
             <DateFormater dateString={date} />
           </div>
           <div className="text-lg font-bold col-span-3 flex space-x-2">
             <div>
-              <FontAwesomeIcon icon={faClock} />
+              <FontAwesomeIcon icon={faClock} className='w-6' />
             </div> 
             <div>
               {readingTime}
             </div>
           </div>
           <div className="flex items-center space-x-2">
-          <FontAwesomeIcon icon={faTag} /> 
+          <FontAwesomeIcon icon={faTag} className='w-6' /> 
           <div>
             {tags}
           </div>

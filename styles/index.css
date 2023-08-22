@@ -9,10 +9,10 @@
   width: 75vw;
 }
 
-.markdown-ol {
+ol {
   list-style-type: decimal;
 }
 
-.markdown-ul {
+ul {
   list-style: disc;
 }

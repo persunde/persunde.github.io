@@ -12,10 +12,11 @@ export default function Blog({ allPosts }) {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
   return (
-    <Layout>
-      <Head>
-        <title>Blog {SITE_NAME}</title>
+    <>
+    <Head>
+        <title>{`Blog ${SITE_NAME}`}</title>
       </Head>
+    <Layout>
       <Header></Header>
       <Container>
         <Intro />
@@ -34,6 +35,7 @@ export default function Blog({ allPosts }) {
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
     </Layout>
+    </>
   )
 }
 

@@ -7,10 +7,35 @@ import { NextPage } from 'next';
 export default function PostBody({ content }) {
   return (
     <div className="markdown-body max-w-5xl ">
-      <ReactMarkdown source={content}
-        renderers={{
-          code: HighlightCode,
-          list: OrderedListBlock,
+      <ReactMarkdown children={content}
+        // renderers={{
+        //   code: HighlightCode,
+        //   list: OrderedListBlock,
+        // }}
+
+        components={{
+          // li(val) {
+          //   return OrderedListBlock(val)
+          // },
+          // ol(val) {
+          //   return OrderedListBlock(val)
+          // },
+          code({node, inline, className, children, ...props}) {
+            const match = /language-(\w+)/.exec(className || '')
+            return !inline && match ? (
+              <SyntaxHighlighter
+                {...props}
+                children={String(children).replace(/\n$/, '')}
+                language={match[1]}
+                PreTag="div"
+                style={vscDarkPlus}
+              />
+            ) : (
+              <code {...props} className={className}>
+                {children}
+              </code>
+            )
+          }
         }}
       />
     </div>
@@ -33,7 +58,7 @@ interface  OrderedListBlockProps {
   children: any,
 }
 
-const OrderedListBlock: NextPage<OrderedListBlockProps> = ({ordered, children}: OrderedListBlockProps) => {
+const OrderedListBlock = ({ordered, children}: OrderedListBlockProps) => {
   let i = 0;
   const list = children.map(val => {
     i += 1;

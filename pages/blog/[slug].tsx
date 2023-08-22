@@ -28,7 +28,7 @@ export default function Post({ post } : posts) {
           <article className="mb-32">
             <Head>
               <title>
-                {post.title} | {SITE_NAME}
+                {`${post.title} | ${SITE_NAME}`}
               </title>
               <meta property="og:image" content={post.featuredImage} />
             </Head>
@@ -66,7 +66,6 @@ export async function getStaticProps({ params }: slugParams) {
     'readingTime',
     'tags',
   ])
-  // const content = await markdownToHtml(post.content || '')
 
   return {
     props: {
