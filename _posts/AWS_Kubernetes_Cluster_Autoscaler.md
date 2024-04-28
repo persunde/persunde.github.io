@@ -2,7 +2,7 @@
 title: How to (Cluster) Autoscale a self hosted Kubernetes on AWS EC2
 author: Per Sunde
 date: '2024-04-29'
-featuredImage: TODO.jpg
+featuredImage: ec2+k8s.png
 tags: 'Kubernets, K8S, K3S, AWS, EC2, hosting, autoscale'
 excerpt: >-
   How do you do cluster autoscaling when you run your own hosted Kubernets cluster?
@@ -33,7 +33,7 @@ excerpt: >-
    1. Configure it to use the ASG by looking for ASG's with the specified tags: `--node-group-auto-discovery=asg:tag=my-autoscaler-tag1,my-autoscaler-tag2`
 5. Deploy a test application to test the Cluster Autoscaler
 
-## IAM Security policy setup
+## 1. Setup the IAM configuration
 
 Create the [Full Cluster Autoscaler Features Policy (Recommended)](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md#full-cluster-autoscaler-features-policy-recommended)
 But remove the "eks:DescribeNodegroup" action, since we are not using EKS.
@@ -75,7 +75,7 @@ Go to IAM -> Policies -> "Create Policy" -> JSON and copy paste this text into t
 
 Next create a IAM Role, give it a descriptive name, and attach this newly created policy. Or add this policy to your existing IAM Role that you use.
 
-## Control plane setup
+## 2. Setup the Control plane
 
 Create one (or more) EC2 instance(s) that will work as your controle-plane nodes. These will not be a part of the auto-scaling.
 These EC2 instances should have the "IAM Role" you created in the previous step.
@@ -120,7 +120,7 @@ export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
 cat traefik-config.yaml | envsubst | kubectl apply -f -
 ```
 
-## Auto-Scale Group setup
+## 3. Create an EC2 Auto Scaling Group (ASG)
 
 > >Note: **Cluster Autoscaler is not responsible for behaviour and registration to the cluster of the new nodes it creates.** The responsibility of registering the new nodes into your cluster lies with the cluster provisioning tooling you use. Example: If you use kubeadm to provision your cluster, it is up to you to automatically execute kubeadm join at boot time via some script.
 >
@@ -159,7 +159,7 @@ INSTANCE_ID=$(ec2metadata --instance-id)
 curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.28.3+k3s2 INSTALL_K3S_EXEC="--kubelet-arg=provider-id=aws:///$AVAILABILITY_ZONE/$INSTANCE_ID" K3S_TOKEN="${K3S_TOKEN}" K3S_URL=https://${MASTER_IP}:6443 sh -
 ```
 
-## Deploy the cluster-autoscaler
+## 4. Deploy the cluster-autoscaler
 
 Clone the cluster-autoscaler repo:
 
@@ -232,7 +232,7 @@ Or check the description and see if there are any issues with deploying the pod:
 kubectl describe pod cluster-autoscaler-<ID> --namespace=kube-system
 ```
 
-## Test the autoscaling
+## 5. Test the autoscaling
 
 Deploy a test deployment that you can use to see if the autoscaler works or not:
 
