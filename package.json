@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "predeploy": "sh remove_whitespace_blogname.sh && next build && echo \"sunde.dev\" > out/CNAME && touch out/.nojekyll",
-    "deploy": "gh-pages -b master -d out --dotfiles true",
+    "deploy": "gh-pages -b master -d out --dotfiles",
     "typecheck": "tsc"
   },
   "dependencies": {
