@@ -4,23 +4,17 @@ import {
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
 
-interface SomedIconsProps {
-  color: string;
-}
-
-const SomedIcons: React.FunctionComponent<SomedIconsProps> = (
-  props
-) => {
-  return (        
-  <div className="flex space-x-4 w-1/12">
-    <div className="w-full space-between">
+const SomedIcons: React.FunctionComponent = () => {
+  return (
+  <div className="flex space-x-4 justify-center">
+    <div>
       <a className="link" target="_blank" rel="noopener noreferrer" href="https://github.com/persunde">
-        <FontAwesomeIcon icon={faGithubSquare} color={props.color} size="6x"/>
+        <FontAwesomeIcon icon={faGithubSquare} color="#24292e" size="2x"/>
       </a>
     </div>
-    <div className="w-full">
-      <a className="link" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/per-sunde-578b68184">
-        <FontAwesomeIcon icon={faLinkedin} color={props.color} size="6x"/>
+    <div>
+      <a className="link" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/per-sunde">
+        <FontAwesomeIcon icon={faLinkedin} color="#0A66C2" size="2x"/>
       </a>
     </div>
   </div>

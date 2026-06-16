@@ -20,9 +20,9 @@ export default function PostBody({ content }) {
           // ol(val) {
           //   return OrderedListBlock(val)
           // },
-          code({node, inline, className, children, ...props}) {
+          code({node, className, children, ...props}) {
             const match = /language-(\w+)/.exec(className || '')
-            return !inline && match ? (
+            return match ? (
               <SyntaxHighlighter
                 {...props}
                 children={String(children).replace(/\n$/, '')}
